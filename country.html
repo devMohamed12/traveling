@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link with google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+    <!-- link with my css -->
+    <link rel="stylesheet" href="css/index.css">
+    <title>Traveling</title>
+</head>
+<body>
+    
+<!-- start header  -->
+    <header class="header" id="header">
+      <div class="container flex-between flex-column-tablet">
+
+        <!-- logo part -->
+        <div class="logo-container width-40 width-100-tablet">
+            <a href="#header" class="logo-link" >
+              Traveling 
+            </a>
+        </div>
+
+        <!-- links part -->
+
+        <nav class="nav width-40 width-100-tablet">
+
+          <ul class="nav-list flex-between">
+            <li class="nav-item">
+              <a href="index.html" class="nav-item-link">home</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#achievements" class="nav-item-link">achievements</a>
+            </li>
+              <li class="nav-item">
+              <a href="index.html#countries" class="nav-item-link">countries</a>   
+              </li>
+          </ul>
+
+        </nav>
+      </div>
+    </header>
+    <!-- end header -->
+
+<div id="hero-section" class="hero-section">
+  
+</div>
+
+<section class="cities-container">
+    <div class="container" id="cities">
+
+      <!-- will get the content from js -->
+    </div>
+</section>
+
+<!-- start booking section  -->
+    
+    <section class="booking-section py-60px" id="booking">
+    <h2 class="main-title">life is short.start traveling!</h2>
+
+    <div class="container flex-between flex-column-tablet">
+        <form class="booking-form width-50" id="booking-form">  
+            <h4 class="main-title booking-form-title">book a trip</h4>
+
+            <div class="booking-item">
+                <label >name:</label>
+                <input required/>
+            </div>
+            
+            <div class="booking-item">
+                <label for="city-select">Select a city:</label>
+                <select id="city-select" required>
+                  <option value="default"> choose city </option>
+                </select>
+            </div>
+
+            <div class="booking-item">
+                <label for="hotel-select">Select a hotel:</label>
+                <select   id="hotel-select"required>
+                  <option value="default"> choose hotel </option>
+                </select>
+            </div>
+            <div class="booking-item">
+                <label for="hotel-select">date:</label>
+                <input type="date" name="" id="">
+                <input type="time" name="" id="">
+            </div>
+            <div class="booking-item">
+                <label >choose class</label>
+                <select name="" id="">
+                      <option value="default"> choose class </option>
+                      <option value="vip"> vip class </option>
+                      <option value="vip"> economy class </option>
+                </select>
+            </div>
+        
+            <div class="booking-item">
+                <label >enter count of tickects:</label>
+                <input type="number" class="tikects-input" id="tikects-input"required>
+                <p class="ticket-p">tickect price: <span id="ticket-price">0</span>$  </p>
+                <p>total price: <span id="total-price">0</span>$</p>
+            </div>
+
+            <button class="main-btn">sumbit</button>
+        </form>
+
+        <div class="booking-image-container width-40">
+            <img src="images/plane.jpeg" alt="" class="max-width-100">
+        </div>
+    </div>
+    </section>
+    </section>
+
+    <!-- end booking section   -->
+
+         <!-- start footer  -->
+    <footer class="footer" id="footer" >
+      <div class="footer-container container">
+
+        <!-- start footer column -->
+        <div class="footer-column">
+          <h4 class="footer-title">Travelling</h4>
+          <p class="footer-description">the best way to travel <br> around the world</p>
+        </div>
+        <!-- start footer column -->
+        <div class="footer-column">
+          <h4 class="footer-title">about us</h4>
+
+          <a href="home.html#achievements">achievements</a>
+          <a href="home.html#features">features</a>
+          <a href="home.html#testimonies">testimonies</a>
+          <a href="home.html#countries">countries</a>
+        </div>
+
+        <!-- end footer column -->
+        <!-- start footer column -->
+        <div class="footer-column footer-countries">
+          <h4 class="footer-title">lets travel</h4>
+          <a href="home.html#booking">book a ticket</a>
+          <p onclick="openCountry('egypt')">explore egypt</p>
+          <p onclick="openCountry('malaysia')">explore Malaysia</p>
+          <p onclick="openCountry('india')">explore india</p>
+        </div>
+
+        <!-- end footer column -->
+        <!-- start footer column -->
+        <div class="footer-column">
+          <h4 class="footer-title">contact us</h4>
+          <p>phone: 01000000000000</p>
+          <p>email: test@gmail.com</p>
+
+        </div>
+        <!-- end footer column -->
+
+      </div>
+    </footer>
+    <!-- end footer  -->
+
+
+<script src="main.js"></script>
+
+</body>
+</html>

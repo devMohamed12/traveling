@@ -1,0 +1,648 @@
+/* declare css variables */
+
+:root{
+    --main-color: #1c4e53;
+    --color2: #db930ef1;
+    --hover-color2: #ca880cca;
+}
+
+/*reset some defaults*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+
+body{
+    font-family: "poppins";
+  
+}
+
+html{
+      scroll-behavior: smooth;
+
+}
+
+/*simple frame work*/
+
+/* to center elments */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/*flex classes */
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*make a  content column in phones */
+@media screen and (max-width: 768px) {
+    .flex-column-tablet{
+        flex-direction: column;
+    }
+}
+
+
+/*width classes*/
+
+.width-fit{
+    width: fit-content;
+}
+.width-40{
+    width: 40%;
+}
+.width-60{
+    width: 60%;
+}
+
+.width-50{
+    width: 50%;
+}
+.max-width-100{
+    max-width: 100%;
+}
+
+/*padding classrs*/
+
+.py-60px{
+    padding: 60px 0;
+}
+
+/*start components*/ 
+.main-title{
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(104deg, #e5da02f1 30%, #f1660cf1 80%);
+  -webkit-background-clip: text;
+  background-clip: text; 
+  font-family: "Arial", sans-serif;
+
+}
+
+.main-btn {
+    display: block;
+    width: fit-content;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s linear;
+    background-color:  var(--color2);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.main-btn:hover{
+    background-color: var(--hover-color2);
+    transform: scale(1.1);
+}
+
+/*end components*/
+
+/*website */
+
+/*start header*/
+.header{
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+
+.logo-container .logo-link{
+    display: block;
+     color:#3a7e85;
+     font-size: 27px;
+    font-weight: 900;
+}
+
+.nav-list .nav-item .nav-item-link{
+    transition: 0.5s linear;
+    font-weight: 500;
+    font-size: 19px;
+    text-transform: capitalize;
+}
+
+.nav-list .nav-item .nav-item-link:hover{
+    color:  var(--color2);
+}
+
+/*make header responsive */
+@media screen and (max-width: 768px) {
+    .header .logo-container,.nav{
+        width: 100%;
+        text-align: center;
+    }
+      .header .flex-column-tablet {
+        gap: 30px;
+      }
+
+   
+}
+
+/*end header*/
+
+
+/*start hero section*/
+.hero-section{
+background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/Cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    padding-top: 20px;
+    min-height: 100vh;
+}
+
+
+
+.hero-section .content-container{
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.hero-section .content-title {
+    font-size: 32px;
+    color: white;
+}
+
+.hero-section .content-description{
+    font-size: 16px;
+    width: 70%;
+    margin: 15px 0;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+
+/*make header responsive */
+@media screen and (max-width: 768px) {
+    .hero-section .content-description {
+        width: 100%;
+    }
+   
+}
+
+
+/*end hero section*/
+
+/* start achievements section */
+.achievements{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.achievements img{
+
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.achievements .content-description {
+    color: rgba(255, 255, 255, 0.733);
+    line-height: 1.4;
+    font-size: 16px;
+    margin: 40px 0;
+}
+
+.achievements .list{
+    display: grid;
+    grid-template-columns: repeat(4,110px);
+    gap: 30px;
+}
+
+.achievements  .achievement-item{
+    text-align: center;
+    padding: 20px 10px ;
+    width: 100%;
+    background-color: #1e8a9493;
+    border-radius: 10px;
+}
+
+.achievements .achievement-item .achievement-item-number{
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .achievements .image-container{
+        display: none;
+    }
+    .achievements .content-container {
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .achievements
+    .content-description
+    {
+        margin: 20px auto;
+        width: 100%;
+    }
+    .achievements .list{
+        display: grid;
+        grid-template-columns: repeat(2, 110px);
+        gap: 15px;
+         width: fit-content;
+        margin: 0 auto;
+    }
+  
+}
+
+/* end achievements section */
+
+/* start features section*/
+
+.features{
+    background-color: var(--main-color);
+}
+
+.features-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+
+.features-item{
+ width: 100%;
+ font-size: 13px;
+ background-color: white;
+ margin-bottom: 20px;
+ padding: 10px 20px;
+ border-radius: 5px;
+}
+
+ .features-item-title {
+     font-size: 20px;
+     margin-bottom: 10px;
+     color: var(--color2);
+ }
+
+ .features-item-description {
+     font-size: 14px;
+     line-height: 1.4;
+ }
+
+
+/*for tablets*/
+@media screen and (max-width: 768px) {
+    .features-container{
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+    .features-gif{
+        max-width: 90%;
+    }
+}
+
+
+/* for lagre secreens */
+@media screen and (min-width: 1024px) {
+    .features .features-gif{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .features-items-left-side .features-item:nth-child(2) {
+        margin: 45px 0;
+    }
+    .features-items-left-side .features-item:not(:nth-child(2)) {
+        margin-left: 45px ;
+    }
+    .features-items-right-side .features-item:nth-child(2) {
+        margin: 45px 0;
+    }
+    .features-items-right-side .features-item:not(:nth-child(2)) {
+        margin-left: -70px ;
+    }
+
+
+}
+
+/* end features section*/
+
+/* start testimonies section */
+.testimonies{
+    background: var(--main-color);
+    color: white;
+}
+
+.testimonies-page{
+    padding: 30px 0;
+    display: grid ;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    gap: 30px ;
+}
+
+.testimonies-item{
+    background-color: white;
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+}
+
+.testimonies-item-head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.testimonies-item-head .head-info-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color2);
+    margin-bottom: 7px;
+}
+.testimonies-item-head .head-info-description{
+    font-size: 16px;
+    color: black;
+}
+
+.head-image{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+.testimonies-item-body{
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+/* end testimonies section */
+
+/*start countries  section*/
+.countries{
+    background-color: var(--main-color);
+}
+
+.countries-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px ,1fr));
+    gap: 40px;
+}
+
+.countries-item{
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.countries-item-image{
+    border-radius: 4px;
+}
+.countries-item-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.274);
+    z-index: 100;
+    border-radius: 4px;
+}
+
+.countries-item .countries-item-image {
+    width: 100%;
+    height: 100%;
+}
+.countries-item .countries-item-content {
+    position: absolute;
+    bottom: 12px;
+    padding: 5px 20px;
+    z-index: 1000;
+    color: white;
+}
+
+.countries-item .countries-item-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/*end countries  section*/
+
+
+/*start footer*/
+.footer{
+    background-color:#0a1112;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+    color: white;
+    padding: 40px 0;
+}
+.footer-column .footer-title{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer-column a,
+.footer-column p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #d8d8d7;
+}
+.footer-column a{
+    display: block;
+
+}
+
+.footer-countries p{
+    cursor: pointer;
+}
+
+.footer-logo{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer h6{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px){
+
+    .footer .footer-column{
+        margin-bottom: 30px;
+    }
+}
+/*end footer*/
+
+/*start country page */
+
+/* start cities-container  */
+.cities-container{
+    background: var(--main-color);
+    padding-bottom: 60px;
+}
+
+.hotel{
+   margin-top: 75px;
+   background: white;
+   box-shadow: 0px 8px 10px #021a1d; 
+   transition: 0.8s;
+   cursor: default;
+   border-radius: 4px;
+}
+
+.cities-container .main-title{
+    padding-top: 75px;
+ }
+
+
+.hotel:hover{
+    box-shadow: 0px 25px 15px #021a1d;
+    transform: translateY(-10px);
+}
+
+.hotel-content-container{
+    padding: 20px;
+}
+
+.hotel .hotel-name{
+    font-size: 26px;
+    color: var(--color2);
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.hotel .hotel-description {
+    color: #777;
+    line-height: 1.45;
+}
+
+.hotel-image-container img{
+    border-radius: 4px;
+}
+
+
+/*make hotel responsive*/
+
+@media screen and (max-width: 768px) {
+    .hotel-content-container,
+    .hotel-image-container {
+        width: 90%;
+    }
+    .hotel-image-container{
+        padding-bottom: 20px;
+
+    }
+}
+
+
+
+/*start booking section */
+.booking-section {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.booking-form{
+    margin-top: 40px;
+}
+
+.booking-form-title{
+    margin: 30px 0;
+    font-size: 26px;
+}
+
+.booking-item{
+    margin-bottom: 60px;
+}
+
+.booking-item  .ticket-p{
+    margin-bottom: 10px;
+}
+
+.booking-item  label ,
+.account-form label
+{
+    display: block;
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+
+.booking-item select,
+.booking-item input
+{
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 18px;
+    padding: 15px 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.booking-item .country-select option {
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .booking-form{
+        width: 90%;
+        padding: 20px;
+    }
+    .booking-item{
+        margin-bottom: 30px;
+    }
+    .booking-item select{
+        
+        width: 100%;
+    }
+    .booking-image-container{
+        display: none;
+    }
+}
+
+/*end booking section */
